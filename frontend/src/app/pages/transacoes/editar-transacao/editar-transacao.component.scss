@@ -1,0 +1,21 @@
+form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 540px;
+}
+
+button, input, div {
+  width: 100%;
+}
+
+input {
+  margin-top: 12px;
+}
+
+button {
+  justify-content: center;
+}

@@ -1,0 +1,30 @@
+<div class="ui-sidebar-lg">
+  <div class="user-info">
+    <img
+      src="assets/{{ usuario?.imageUrl }}"
+      alt="User Image"
+      class="user-image"
+    />
+  <p>{{ usuario?.username }}</p>
+  </div>
+  <div class="menu-items">
+    <a routerLink="/spa/listar-transacoes" routerLinkActive="active"
+      >Listar Transações</a
+    >
+    <a routerLink="/spa/criar-transacao" routerLinkActive="active"
+      >Criar Transação</a
+    >
+    <a *ngIf="usuario?.admin" routerLink="/spa/listar-usuarios" routerLinkActive="active"
+      >Listar usuários</a
+    >
+  </div>
+  <div class="logout">
+    <button
+      pButton
+      type="button"
+      label="Logout"
+      icon="pi pi-sign-out"
+      (click)="logout()"
+    ></button>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+@import "primeicons/primeicons.css";
+
+
+/* You can add global styles to this file, and also import other style files */
+
+/* Order */
+@layer reset, primeng;
+
+/* Reset CSS */
+@layer reset {
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+html {
+  width: 100vw;
+}

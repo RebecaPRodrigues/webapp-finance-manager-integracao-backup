@@ -1,0 +1,76 @@
+<app-titulo titulo="Criar transação"></app-titulo>
+
+<form [formGroup]="formGroup" (ngSubmit)="submit()">
+  <div class="flex flex-column gap-2">
+    <label for="input-description">Descrição</label><br />
+    <input
+      id="input-description"
+      type="text"
+      pInputText
+      formControlName="description"
+      placeholder="Digite uma descrição"
+    />
+  </div>
+
+  <div class="card flex justify-content-center">
+    <label for="input-type">Tipo</label><br />
+    <p-dropdown
+      [options]="tipos"
+      placeholder="Selecione um tipo"
+      formControlName="type"
+    />
+  </div>
+
+  <div class="flex flex-column gap-2">
+    <label for="input-amount">Valor</label><br />
+    <p-inputNumber
+      id="input-amount"
+      inputId="minmaxfraction"
+      mode="decimal"
+      formControlName="amount"
+      [minFractionDigits]="0"
+      [maxFractionDigits]="2"
+    />
+  </div>
+
+  <div class="flex flex-column gap-2">
+    <label for="input-transactionWith">Envolvidos</label><br />
+    <input
+      id="input-transactionWith"
+      type="text"
+      pInputText
+      formControlName="transactionWith"
+      placeholder="Digite um nome"
+    />
+  </div>
+
+  <div class="flex flex-column gap-2">
+    <label for="input-date">Data</label><br />
+    <input id="input-date" type="text" pInputText formControlName="date" />
+  </div>
+
+  <div class="flex flex-column gap-2">
+    <label for="input-category">Categoria</label><br />
+    <p-dropdown
+    [options]="categorias"
+    formControlName="category"
+    optionLabel="label"
+    optionValue="value"
+    placeholder="Selecione uma categoria"
+  />
+  
+  </div>
+
+  <div class="flex flex-column gap-2">
+    <label for="input-paymentMethod">Método de pagamento</label><br />
+    <input
+      id="input-paymentMethod"
+      type="text"
+      pInputText
+      formControlName="paymentMethod"
+      placeholder="Digite um método de pagamento"
+    />
+  </div>
+
+  <button pButton type="submit">Criar transação</button>
+</form>
